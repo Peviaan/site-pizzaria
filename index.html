@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Roma</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">Roma<span>.</span></div>
+
+        <button class="cart-btn" id="open-cart">
+
+            <span class="material-icons">shopping_cart</span>
+            <span class="cart-count">0</span>
+            <span class="cart-text">Meu Pedido</span>
+
+        </button>
+
+    </header>
+    
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="badge">🔥 Tradição no Forno a Lenha</span>
+            <h1>A verdadeira <span>Pizza Italiana</span> na sua mesa.</h1>
+            <p>Massa de fermentação natural por 48hr, molho de tomates pelati importados e ingredientes frescos. Peça agora e receba quentinha na sua casa.</p>
+
+            <div class="hero-actions">
+
+                <a href="#cardapio" class="btn-primary">Ver Cardápio</a>
+                <span class="delivery-time">
+
+                    <span class="material-icons">timer</span> Entrega em 30-40 min
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop" alt="Pizza Napoletana" class="pizza-img">
+
+        </div>
+
+    </section>
+
+    <section class="features">
+
+        <div class="feature-item">
+
+            <span class="material-icons">local_fire_department</span>
+            <p>Forno a Lenha</p>
+
+        </div>
+
+        <div class="feature-item">
+
+            <span class="material-icons">eco</span>
+            <p>Ingredientes Frescos</p>
+
+        </div>
+
+        <div class="feature-item">
+
+            <span class="material-icons">moped</span>
+            <p>Entrega Rápida</p>
+
+        </div>
+
+        <div class="feature-item">
+
+            <span class="material-icons">payments</span>
+            <p>Aceitamos Pix</p>
+
+        </div>
+
+    </section>
+
+    <section id="cardapio" class="menu-section">
+
+        <div class="menu-header">
+
+            <span class="badge">🍕 Nosso Cardápio</span>
+            <h2>Escolha sua <span>Pizza</span></h2>
+            <p>Todas as pizzas grander tem 8 fatias e massa de fermentação natural.</p>
+
+        </div>
+
+        <div class="menu-filters">
+
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="tradicionais">Tradicionais</button>
+            <button class="filter-btn" data-filter="especiais">Especiais</button>
+            <button class="filter-btn" data-filter="doces">Doces</button>
+            <button class="filter-btn" data-filter="bebidas">Bebidas</button>
+
+        </div>
+
+        <div class="menu-grid">
+
+            <div class="menu-card" data-category="tradicionais">
+
+                <span class="card-badge">Mais Pedida</span>
+                <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600&auto=format&fit=crop" alt="Pizza Margherita">
+                <div class="card-info">
+
+                    <h3>Margherita Clássica</h3>
+                    <p>Molho de tomate pelati, mussarela de búfala fresca, manjericão e fio de azeite extra virgem.</p>
+                    <div class="card-footer">
+
+                        <span class="price">R$ 58,00</span>
+                        <button class="add-btn" data-name="Margherita Clássica" data-price="58.00">
+
+                            <span class="material-icons">add</span> Adicionar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="menu-card" data-category="tradicionais">
+
+                <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600&auto=format&fit=crop" alt="Pizza Pepperoni">
+                <div class="card-info">
+
+                    <h3>Pepperoni Artesanal</h3>
+                    <p>Molho de tomate da casa, mussarela derretida e generosas fatias de pepperoni levemente picante.</p>
+                    <div class="card-footer">
+
+                        <span class="price">R$ 64,00</span>
+                        <button class="add-btn" data-name="Pepperoni Artesanal" data-price="64.00">
+
+                            <span class="material-icons">add</span> Adicionar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="menu-card" data-category="especiais">
+
+                <span class="card-badge yellow">Chef</span>
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600&auto=format&fit=crop" alt="Pizza Parma e Rúcula">
+                <div class="card-info">
+
+                    <h3>Parma & Rúcula</h3>
+                    <p>Mussarela especial, presunto de Parma fatiado na hora, rúcula fresca e lascas de parmesão.</p>
+                    <div class="card-footer">
+
+                        <span class="price">R$ 74,00</span>
+                        <button class="add-btn" data-name="Parma & Rúcula" data-price="74.00">
+
+                            <span class="material-icons">add</span> Adicionar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="menu-card" data-category="especiais">
+
+                <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?q=80&w=600&auto=format&fit=crop" alt="Quarto Queijos">
+                <div class="card-info">
+
+                    <h3>Quatro Queijos</h3>
+                    <p>Mussarela, gorgonzola italiano, provolone defumado e catupiry original com toque de orégano.</p>
+                    <div class="card-footer">
+
+                        <span class="price">R$ 68,00</span>
+                        <button class="add-btn" data-name="Quatro Queijos" data-price="68.00">
+
+                            <span class="material-icons">add</span> Adicionar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="menu-card" data-category="doces">
+
+                <span class="card-badge">Doce</span>
+                <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=600&auto=format&fit=crop" alt="Nutella com Morango">
+                <div class="card-info">
+
+                    <h3>Nutella com Morango</h3>
+                    <p>Massa fina e crocante coberta com creme de avelã original, morango frescos e raspas de chocolate.</p>
+                    <div class="card-footer">
+
+                        <span class="price">R$ 54,00</span>
+                        <button class="add-btn" data-name="Nutella com Morango" data-price="54.00">
+
+                            <span class="material-icons">add</span> Adicionar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="menu-card" data-category="bebidas">
+
+                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=600&auto=format&fit=crop" alt="Coca-Cola 2L">
+                <div class="card-info">
+
+                    <h3>Coca-Cola 2 Litros</h3>
+                    <p>Refrigerante bem gelado para acompanhar sua pizza (Original ou Sem Açúcar).</p>
+                    <div class="card-footer">
+
+                        <span class="price">R$ 14,00</span>
+                        <button class="add-btn" data-name="Coca-Cola 2L" data-price="14.00">
+
+                            <span class="material-icons">add</span> Adicionar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about-section" id="historia">
+
+        <div class="about-image">
+
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" alt="Forno a lenha da Pizzaria Roma">
+
+        </div>
+
+        <div class="about-content">
+
+            <span class="badge">🇮🇹 Nossa Essência</span>
+            <h2>Tradição que vem do <span>Forno a Lenha</span></h2>
+            <p>Na Pizzaria Roma, cada massa descansa por 48 horas em fermentação natural para ficar leve, crocante por fora e macia por dentro. Assada em forno a lenha a 450°C, nossa pizza chega á sua mesa com o verdadeiro sabor artesanal.</p>
+
+            <div class="about-stats">
+
+                <div class="stat-box">
+
+                    <strong>48hr</strong>
+                    <span>Fermentação Natural</span>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <strong>450°C</strong>
+                    <span>Forno a Lenha</span>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <strong>+10 anos</strong>
+                    <span>De Tradição</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div class="footer-col">
+
+                <div class="logo">Roma<span>.</span></div>
+                <p class="footer-desc">Pizzaria artesanal com igredientes selecionados e entrega rápida na região.</p>
+                <div class="status-badge" id="store-status">
+
+                    <span class="status-dot"></span>
+                    <span id="status-text">Verificando horário...</span>
+
+                </div>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4>Horário de Funcionamento</h4>
+                <ul>
+
+                    <li>Terça a Quinta: 18hr ás 23hr</li>
+                    <li>Sexta a Domingo: 18hr ás 00hr</li>
+                    <li>Segunda-feira: Fechado</li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-col">
+
+                <h4>Onde Estamos</h4>
+                <ul>
+
+                    <li>Rua das XXX, 000 - Centro</li>
+                    <li>WhatsApp: (11) 90000-0000</li>
+                    <li>Instagram: @pizzariaroma.oficial</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>&copy; 2026 Pizzaria Roma. Todos os direitos reservados.</p>
+
+        </div>
+
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <aside class="cart-drawer" id="cart-drawer">
+
+        <div class="cart-header">
+
+            <h3>Seu <span>Pedido</span></h3>
+            <button class="close-cart" id="close-cart">
+
+                <span class="material-icons">close</span>
+
+            </button>
+
+        </div>
+
+        <div class="cart-items" id="cart-items">
+
+            <p class="empty-cart">Seu carrinho está vazio.</p>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-totals">
+
+                <div class="total-row">
+
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">R$ 0,00</span>
+
+                </div>
+
+                <div class="total-row">
+
+                    <span>Taxa de entrega</span>
+                    <span id="cart-delivery">R$ 0,00</span>
+
+                </div>
+
+                <div class="total-row final-total">
+
+                    <span>Total</span>
+                    <span id="cart-total">R$ 0,00</span>
+
+                </div>
+
+            </div>
+
+            <div class="checkout-fields">
+
+                <input type="text" id="cart-address" placeholder="Endereço completo (Rua, N°, Bairro)">
+                <select id="cart-payment">
+
+                    <option value="Pix">Pagamento via Pix</option>
+                    <option value="Cartão na entrega">Cartão (Crédito/Débito na entrega)</option>
+                    <option value="Dinheiro">Dinheiro na entrega</option>
+
+                </select>
+
+            </div>
+
+            <button class="checkout-btn" id="checkout-btn">Finalizar no WhatsApp</button>
+
+        </div>
+
+    </aside>
+
+    <script>
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const menuCards = document.querySelectorAll('.menu-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                menuCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    }else{
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        let cart = [];
+        const DELIVERY_FEE = 8.00;
+        
+        const openCartBtn = document.getElementById('open-cart');
+        const closeCartBtn = document.getElementById('close-cart');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartCount = document.querySelector('.cart-count');
+        const cartSubtotalEl = document.getElementById('cart-subtotal');
+        const cartDeliveryEl = document.getElementById('cart-delivery');
+        const cartTotalEl = document.getElementById('cart-total');
+        const checkoutBtn = document.getElementById('checkout-btn');
+        const addBtns = document.querySelectorAll('.add-btn');
+
+        function toggleCart(open) {
+            cartDrawer.classList.toggle('active', open);
+            cartOverlay.classList.toggle('active', open);
+        }
+
+        openCartBtn.addEventListener('click', () => toggleCart(true));
+        closeCartBtn.addEventListener('click', () => toggleCart(false));
+        cartOverlay.addEventListener('click', () => toggleCart(false));
+
+        function formatPrice(value) {
+            return `R$ ${value.toFixed(2).replace('.', ',')}`;
+        }
+
+        addBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const name = btn.getAttribute('data-name');
+                const price = parseFloat(btn.getAttribute('data-price'));
+
+                const existingItem = cart.find(item => item.name === name);
+                if (existingItem) {
+                    existingItem.qty += 1;
+                }else{
+                    cart.push({name, price, qty: 1});
+                }
+
+                updateCart();
+
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = 'adicionado ✓';
+                btn.style.backgroundColor = '#25D366';
+                btn.style.color = '#111';
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                }, 800);
+            });
+        });
+
+        function updateCart() {
+            cartItemsContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart">Seu carrinho está vazio.</p>';
+                cartCount.textContent ='0';
+                cartSubtotalEl.textContent = formatPrice(0);
+                cartDeliveryEl.textContent = formatPrice(0);
+                cartTotalEl.textContent = formatPrice(0);
+                return;
+            }
+
+            let subtotal = 0;
+            let totalItems = 0;
+
+            cart.forEach((item, index) => {
+                subtotal += item.price * item.qty;
+                totalItems += item.qty;
+
+                const itemEl = document.createElement('div');
+                itemEl.classList.add('cart-item');
+                itemEl.innerHTML = `
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <span>${formatPrice(item.price * item.qty)}</span>
+                    </div>
+                    <div class="cart-item-controls">
+                        <button class="qty-btn" data-index="${index}" data-action="decrease">-</button>
+                        <span>${item.qty}</span>
+                        <button class="qty-btn" data-index="${index}" data-action="increase">+</button>
+                    </div>
+                    `;
+                    cartItemsContainer.appendChild(itemEl);
+            });
+
+            cartCount.textContent = totalItems;
+            cartSubtotalEl.textContent = formatPrice(subtotal);
+            cartDeliveryEl.textContent = formatPrice(DELIVERY_FEE);
+            cartTotalEl.textContent = formatPrice(subtotal + DELIVERY_FEE);
+
+        }
+
+        cartItemsContainer.addEventListener('click', (e) => {
+            if(!e.target.classList.contains('qty-btn')) return;
+
+            const index = parseInt(e.target.getAttribute('data-index'));
+            const action = e.target.getAttribute('data-action');
+
+            if (action === 'increase') {
+                cart[index].qty += 1;
+            }else if (action === 'decrease') {
+                cart[index].qty -= 1;
+                if (cart[index].qty <= 0) {
+                    cart.splice(index, 1);
+                }
+            }
+            updateCart()
+        });
+
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length === 0) {
+                alert('Adicione pelo menos um item antes de finalizar o pedido.');
+                return;
+            }
+
+            const address = document.getElementById('cart-address').value.trim();
+            const payment = document.getElementById('cart-payment').value;
+
+            if (!address) {
+                alert('Por favor, informe o endereço de entrega.');
+                return;
+            }
+
+            let message = '*NOVO PEDIDO - PIZZARIA ROMA*\n\n';
+            let subtotal = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.qty;
+                subtotal += itemTotal;
+                message += `• ${item.qty}x ${item.name} - ${formatPrice(itemTotal)}\n`;
+
+            });
+
+            message += `\n*Subtotal:* ${formatPrice(subtotal)}`;
+            message += `\n*Entrega:* ${formatPrice(DELIVERY_FEE )}`;
+            message += `\n*Total:* ${formatPrice(subtotal + DELIVERY_FEE)}`;
+            message += `\n*Endereço:* ${address}`;
+            message += `\n*Pagamento:* ${payment}`;
+
+            const numero = '5511000000000';
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
+            window.location.href = url;
+        });
+
+        function updateStoreStatus() {
+            const now = new Date();
+            const hour = now.getHours();
+            const day = now.getDay();
+            const statusBadge = document.getElementById('store-status');
+            const statusText = document.getElementById('status-text');
+
+            const isOpen = day !== 1 && hour >= 18 && hour <= 23;
+
+            if (isOpen) {
+                statusBadge.classList.remove('closed');
+                statusText.textContent = 'Aberto agora • Delivery ativo';
+            } else {
+                statusBadge.classList.add('closed');
+                statusText.textContent = 'Fechado • Abre ás 18hr'
+            }
+        }
+
+        updateStoreStatus();
+
+    </script>
+
+
+</body>
+</html>
