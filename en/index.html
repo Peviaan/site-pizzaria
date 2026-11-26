@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roma Pizzeria — Wood-Fired Artisan Pizza</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Roma<span>.</span></div>
+
+        <div class="nav-actions">
+            <div class="lang-switch" aria-label="Language switcher">
+                <a href="../">PT</a>
+                <span>/</span>
+                <a href="#" class="active">EN</a>
+            </div>
+
+            <button class="cart-btn" id="open-cart">
+                <span class="material-icons">shopping_cart</span>
+                <span class="cart-count">0</span>
+                <span class="cart-text">My Order</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">🔥 Wood-Fired Tradition</span>
+            <h1>Authentic <span>Italian Pizza</span> at your table.</h1>
+            <p>48-hour naturally fermented dough, imported San Marzano tomatoes, and fresh ingredients. Order now and get it delivered piping hot to your door.</p>
+
+            <div class="hero-actions">
+                <a href="#menu" class="btn-primary">View Menu</a>
+                <span class="delivery-time">
+                    <span class="material-icons">timer</span> 30–40 min delivery
+                </span>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop" alt="Neapolitan Pizza" class="pizza-img">
+        </div>
+    </section>
+
+    <!-- Highlights Bar -->
+    <section class="features">
+        <div class="feature-item">
+            <span class="material-icons">local_fire_department</span>
+            <p>Wood-Fired Oven</p>
+        </div>
+        <div class="feature-item">
+            <span class="material-icons">eco</span>
+            <p>Fresh Ingredients</p>
+        </div>
+        <div class="feature-item">
+            <span class="material-icons">moped</span>
+            <p>Fast Delivery</p>
+        </div>
+        <div class="feature-item">
+            <span class="material-icons">payments</span>
+            <p>Apple Pay & Cards</p>
+        </div>
+    </section>
+
+    <!-- Interactive Menu -->
+    <section id="menu" class="menu-section">
+        <div class="menu-header">
+            <span class="badge">🍕 Our Menu</span>
+            <h2>Choose your <span>Pizza</span></h2>
+            <p>All large pizzas feature 8 slices and 48-hour naturally fermented dough.</p>
+        </div>
+
+        <div class="menu-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="classics">Classics</button>
+            <button class="filter-btn" data-filter="specialties">Specialties</button>
+            <button class="filter-btn" data-filter="desserts">Desserts</button>
+            <button class="filter-btn" data-filter="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-grid">
+
+            <!-- Item 1 -->
+            <div class="menu-card" data-category="classics">
+                <span class="card-badge">Best Seller</span>
+                <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600&auto=format&fit=crop" alt="Classic Margherita Pizza">
+                <div class="card-info">
+                    <h3>Classic Margherita</h3>
+                    <p>San Marzano tomato sauce, fresh buffalo mozzarella, sweet basil, and extra virgin olive oil.</p>
+                    <div class="card-footer">
+                        <span class="price">$18.00</span>
+                        <button class="add-btn" data-name="Classic Margherita" data-price="18.00">
+                            <span class="material-icons">add</span> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="menu-card" data-category="classics">
+                <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600&auto=format&fit=crop" alt="Artisan Pepperoni Pizza">
+                <div class="card-info">
+                    <h3>Artisan Pepperoni</h3>
+                    <p>House-made tomato sauce, melted mozzarella, and generous slices of crispy, mildly spiced pepperoni.</p>
+                    <div class="card-footer">
+                        <span class="price">$20.00</span>
+                        <button class="add-btn" data-name="Artisan Pepperoni" data-price="20.00">
+                            <span class="material-icons">add</span> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="menu-card" data-category="specialties">
+                <span class="card-badge yellow">Chef's Pick</span>
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600&auto=format&fit=crop" alt="Parma and Arugula Pizza">
+                <div class="card-info">
+                    <h3>Parma & Arugula</h3>
+                    <p>Premium mozzarella, freshly sliced Prosciutto di Parma, crisp wild arugula, and shaved Parmigiano.</p>
+                    <div class="card-footer">
+                        <span class="price">$23.00</span>
+                        <button class="add-btn" data-name="Parma & Arugula" data-price="23.00">
+                            <span class="material-icons">add</span> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="menu-card" data-category="specialties">
+                <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?q=80&w=600&auto=format&fit=crop" alt="Four Cheese Pizza">
+                <div class="card-info">
+                    <h3>Four Cheese</h3>
+                    <p>Mozzarella, Italian gorgonzola, smoked provolone, and creamy fontina finished with wild oregano.</p>
+                    <div class="card-footer">
+                        <span class="price">$21.00</span>
+                        <button class="add-btn" data-name="Four Cheese" data-price="21.00">
+                            <span class="material-icons">add</span> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="menu-card" data-category="desserts">
+                <span class="card-badge">Sweet</span>
+                <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=600&auto=format&fit=crop" alt="Nutella and Strawberry Pizza">
+                <div class="card-info">
+                    <h3>Nutella & Strawberry</h3>
+                    <p>Thin, crispy crust topped with original hazelnut spread, fresh strawberries, and dark chocolate shavings.</p>
+                    <div class="card-footer">
+                        <span class="price">$16.00</span>
+                        <button class="add-btn" data-name="Nutella & Strawberry" data-price="16.00">
+                            <span class="material-icons">add</span> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="menu-card" data-category="drinks">
+                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=600&auto=format&fit=crop" alt="Coca-Cola 2L">
+                <div class="card-info">
+                    <h3>Coca-Cola 2L</h3>
+                    <p>Ice-cold soda to pair with your pizza (Classic or Zero Sugar).</p>
+                    <div class="card-footer">
+                        <span class="price">$5.00</span>
+                        <button class="add-btn" data-name="Coca-Cola 2L" data-price="5.00">
+                            <span class="material-icons">add</span> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="about-section" id="story">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" alt="Roma Pizzeria Wood-Fired Oven">
+        </div>
+
+        <div class="about-content">
+            <span class="badge">🇮🇹 Our Craft</span>
+            <h2>Tradition from the <span>Wood-Fired Oven</span></h2>
+            <p>At Roma Pizzeria, every batch of dough rests for 48 hours in natural fermentation for a light, airy crust that's crisp outside and tender inside. Baked at 850°F in our wood-fired oven, every pie delivers true artisan flavor.</p>
+
+            <div class="about-stats">
+                <div class="stat-box">
+                    <strong>48h</strong>
+                    <span>Cold Fermentation</span>
+                </div>
+                <div class="stat-box">
+                    <strong>850°F</strong>
+                    <span>Wood-Fired Oven</span>
+                </div>
+                <div class="stat-box">
+                    <strong>10+ yrs</strong>
+                    <span>Of Tradition</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo">Roma<span>.</span></div>
+                <p class="footer-desc">Artisan wood-fired pizzeria crafted with imported ingredients and fast local delivery.</p>
+                <div class="status-badge" id="store-status">
+                    <span class="status-dot"></span>
+                    <span id="status-text">Checking hours...</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>Tue – Thu: 6:00 PM – 11:00 PM</li>
+                    <li>Fri – Sun: 6:00 PM – 12:00 AM</li>
+                    <li>Monday: Closed</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Find Us</h4>
+                <ul>
+                    <li>420 Palm Avenue, Downtown</li>
+                    <li>Phone: +1 (555) 000-0000</li>
+                    <li>Instagram: @romapizzeria.official</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Roma Pizzeria. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Overlay & Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your <span>Order</span></h3>
+            <button class="close-cart" id="close-cart">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-totals">
+                <div class="total-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="total-row">
+                    <span>Delivery fee</span>
+                    <span id="cart-delivery">$0.00</span>
+                </div>
+                <div class="total-row final-total">
+                    <span>Total</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+            </div>
+
+            <div class="checkout-fields">
+                <input type="text" id="cart-address" placeholder="Street Address, Apt/Suite, Zip Code">
+                <select id="cart-payment">
+                    <option value="Apple Pay / Google Pay">Apple Pay / Google Pay</option>
+                    <option value="Credit/Debit Card on delivery">Credit / Debit Card on delivery</option>
+                    <option value="Cash">Cash on delivery</option>
+                </select>
+            </div>
+
+            <button class="checkout-btn" id="checkout-btn">Order via WhatsApp</button>
+        </div>
+    </aside>
+
+    <script>
+        // --- Menu Filters ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const menuCards = document.querySelectorAll('.menu-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                menuCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // --- Cart Logic ---
+        let cart = [];
+        const DELIVERY_FEE = 4.00;
+
+        const openCartBtn = document.getElementById('open-cart');
+        const closeCartBtn = document.getElementById('close-cart');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartCount = document.querySelector('.cart-count');
+        const cartSubtotalEl = document.getElementById('cart-subtotal');
+        const cartDeliveryEl = document.getElementById('cart-delivery');
+        const cartTotalEl = document.getElementById('cart-total');
+        const checkoutBtn = document.getElementById('checkout-btn');
+        const addBtns = document.querySelectorAll('.add-btn');
+
+        function toggleCart(open) {
+            cartDrawer.classList.toggle('active', open);
+            cartOverlay.classList.toggle('active', open);
+        }
+
+        openCartBtn.addEventListener('click', () => toggleCart(true));
+        closeCartBtn.addEventListener('click', () => toggleCart(false));
+        cartOverlay.addEventListener('click', () => toggleCart(false));
+
+        function formatPrice(value) {
+            return `$${value.toFixed(2)}`;
+        }
+
+        addBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const name = btn.getAttribute('data-name');
+                const price = parseFloat(btn.getAttribute('data-price'));
+
+                const existingItem = cart.find(item => item.name === name);
+                if (existingItem) {
+                    existingItem.qty += 1;
+                } else {
+                    cart.push({ name, price, qty: 1 });
+                }
+
+                updateCart();
+
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = 'Added ✓';
+                btn.style.backgroundColor = '#25D366';
+                btn.style.color = '#111';
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                }, 800);
+            });
+        });
+
+        function updateCart() {
+            cartItemsContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+                cartCount.textContent = '0';
+                cartSubtotalEl.textContent = formatPrice(0);
+                cartDeliveryEl.textContent = formatPrice(0);
+                cartTotalEl.textContent = formatPrice(0);
+                return;
+            }
+
+            let subtotal = 0;
+            let totalItems = 0;
+
+            cart.forEach((item, index) => {
+                subtotal += item.price * item.qty;
+                totalItems += item.qty;
+
+                const itemEl = document.createElement('div');
+                itemEl.classList.add('cart-item');
+                itemEl.innerHTML = `
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <span>${formatPrice(item.price * item.qty)}</span>
+                    </div>
+                    <div class="cart-item-controls">
+                        <button class="qty-btn" data-index="${index}" data-action="decrease">-</button>
+                        <span>${item.qty}</span>
+                        <button class="qty-btn" data-index="${index}" data-action="increase">+</button>
+                    </div>
+                `;
+                cartItemsContainer.appendChild(itemEl);
+            });
+
+            cartCount.textContent = totalItems;
+            cartSubtotalEl.textContent = formatPrice(subtotal);
+            cartDeliveryEl.textContent = formatPrice(DELIVERY_FEE);
+            cartTotalEl.textContent = formatPrice(subtotal + DELIVERY_FEE);
+        }
+
+        cartItemsContainer.addEventListener('click', (e) => {
+            if (!e.target.classList.contains('qty-btn')) return;
+
+            const index = parseInt(e.target.getAttribute('data-index'));
+            const action = e.target.getAttribute('data-action');
+
+            if (action === 'increase') {
+                cart[index].qty += 1;
+            } else if (action === 'decrease') {
+                cart[index].qty -= 1;
+                if (cart[index].qty <= 0) {
+                    cart.splice(index, 1);
+                }
+            }
+            updateCart();
+        });
+
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length === 0) {
+                alert('Please add at least one item before checking out.');
+                return;
+            }
+
+            const address = document.getElementById('cart-address').value.trim();
+            const payment = document.getElementById('cart-payment').value;
+
+            if (!address) {
+                alert('Please enter your delivery address.');
+                return;
+            }
+
+            let message = '*NEW ORDER - ROMA PIZZERIA*\n\n';
+            let subtotal = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.qty;
+                subtotal += itemTotal;
+                message += `• ${item.qty}x ${item.name} — ${formatPrice(itemTotal)}\n`;
+            });
+
+            message += `\n*Subtotal:* ${formatPrice(subtotal)}`;
+            message += `\n*Delivery:* ${formatPrice(DELIVERY_FEE)}`;
+            message += `\n*Total:* ${formatPrice(subtotal + DELIVERY_FEE)}`;
+            message += `\n\n*Address:* ${address}`;
+            message += `\n*Payment:* ${payment}`;
+
+            const phone = '15550000000';
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.location.href = url;
+        });
+
+        // --- Live Store Status ---
+        function updateStoreStatus() {
+            const now = new Date();
+            const hour = now.getHours();
+            const day = now.getDay();
+            const statusBadge = document.getElementById('store-status');
+            const statusText = document.getElementById('status-text');
+
+            const isOpen = day !== 1 && hour >= 18 && hour <= 23;
+
+            if (isOpen) {
+                statusBadge.classList.remove('closed');
+                statusText.textContent = 'Open now • Delivery active';
+            } else {
+                statusBadge.classList.add('closed');
+                statusText.textContent = 'Closed • Opens at 6:00 PM';
+            }
+        }
+
+        updateStoreStatus();
+    </script>
+</body>
+</html>
